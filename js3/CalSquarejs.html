@@ -1,0 +1,21 @@
+<html>
+	<head>
+	<script type='text/javascript'>
+	function show()
+	{
+	let textBox=document.getElementById("txtFirst");
+	let txtValue=textBox.value;
+	let num=parseInt(txtValue);
+	let result=num*num;
+	
+	document.getElementById("h").innerHTML="square is"+(result);
+	}
+	</script>
+	</head>
+<body>
+	<input type="text"name="n"value=""id='txtFirst'style="width:200px;height:80px;" onclick='show()'/>
+	<br>
+	<h1 id="h"> </h1>
+</body>
+</html>
+	

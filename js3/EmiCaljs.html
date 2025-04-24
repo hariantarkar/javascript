@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title>EMI Calculater:</title>
+	<style>
+	body{
+	background-color:pink;
+	}
+	button {
+      padding: 10px;
+      margin-top: 10px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+	 label {
+      display: block;
+      margin-bottom: 15px;
+	   font-size: 20px;
+      
+    }
+	
+
+    input {
+      padding: 8px;
+      width: 220px;
+      margin-top: 5px;
+	  border-color:red;
+	   font-size: 20px;
+    }
+	.output p {
+      font-size: 20px;
+	  }
+	  
+		 .inputs, .output {
+      flex: 1;
+    }
+	
+	</style>
+	<script>
+	function CalculetEmi()
+	{
+	let principle;
+	principle=parseFloat(document.getElementById('loanamount').value);
+	let tenureYears;
+	tenureYears= parseFloat(document.getElementById('tenure').value);
+	let annualInterestRate=
+	parseFloat(document.getElementById('IntrestRate').value);
+	
+	
+	 const tenureMonths = tenureYears * 12;
+      const monthlyInterestRate = annualInterestRate / (12 / 100;)
+
+      const emi = (principle * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, tenureMonths)) / 
+                  (Math.pow(1 + monthlyInterestRate, tenureMonths) - 1);
+
+      const totalPayment = emi * tenureMonths;
+      const totalInterest = totalPayment - principle;
+
+      
+	
+	
+	</script>
+<body>
+	<h2>EMI Calculater :--</h2>
+	
+	<div class="input">
+		<labale>
+		Loan Amount:<br>
+		<input type="number" id="loanamount" value="20000" >
+		</labale>
+		
+		<labale>
+		<br><br>
+		Ternure (years)<br>
+		<input type="number" id="tenure" value="30">
+		</labale>
+		
+		<label>
+		<br>
+		<br>
+        Interest Rate (% P.A.):<br>
+        <input type="number" id="InterestRate" value="4.7">
+		</label>
+		 <button onclick="calculateEMI()">Calculate EMI</button>
+	</div>
+	<div class="output">
+		<h2>Monthly Home Loan Emi</h1>
+		<p id="emi"> </p>
+		<p id="totalInterest">Total Intrest: </p>
+		<p id="totalPayment">Total Amount:</p>
+	</div>
+</body>
+</html>	
+		
+	

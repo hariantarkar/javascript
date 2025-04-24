@@ -1,0 +1,45 @@
+<htm>
+	<head>
+	<title>Table print</title>
+	<style>
+	input {
+	width:400px;
+	height:40px;
+	}
+	</style>
+	<script type='text/javascript'>
+	function genTable()
+	{
+	document.getElementById("gridContainer").innerHTML=" ";
+	let no=parseInt(document.getElementById("f").value);
+	let table=document.createElement("table");
+	table.style.width="50%";
+	let tr=document.createElement("tr");
+	let th=document.createElement("th");
+	th.appendChild(th);
+	
+	th=document.createElement("th");
+	th.innerHTML="X";
+	tr.appendChild(th);
+	
+	th.document.createElement("th");
+	th.innerHTML="Number";
+	tr.appendChild("th");
+	
+	th
+	
+	
+	
+	
+	
+	
+<body>
+	<input type='text' name='f' vlaue=''/>&nbsp;&nbsp;
+	<input type='button' name='f'value='Print Table'onclick='genTable()'/>
+	<br>
+	<br>
+	<div id='gridContainer'>
+	</div>
+</body>
+</html>
+	

@@ -1,0 +1,5 @@
+let arr=["abc","mno","xyz","hari"];
+
+let result=arr.sort();
+
+console.log(result);

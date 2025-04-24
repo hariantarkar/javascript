@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>First try in dom method.
+		</title>
+		<style>
+			input
+			{
+			width:100px;
+			hight:80px;
+			}
+			
+		</style>
+		<script type='text/javascript'>
+		function show()
+		{
+		let heading=document.getElementById("t");
+		let str=heading.innerHTML;
+		alert(str);
+		}
+		</script>
+	<body>
+		<input type='button' name='name'value='Access heading'onclick='show()'/>
+		<br>
+		<br>
+		<h1 id="t">Be positive</h1>
+	</body>
+</html>
+	
+	

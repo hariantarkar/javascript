@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>First try event handling
+		</title>
+		<style>
+		input
+		{
+		   width:30px;
+		   hight:30px;
+		}
+		</style>
+		<script type='text/javascript'>
+		function show()
+		{
+		alert("Be positive");
+		}
+		</script>
+	</head>
+<body>
+	<input type='button' name='s' value='call alert box'onclick="show()"/>
+</body>
+</html>
+	

@@ -1,0 +1,33 @@
+<html>
+	<head>
+	<title>Billing App</title>
+	<Style>
+	input
+	{
+	width:400px;
+	height:40px;
+	}
+	</style>
+	<script type='text/javascript'>
+	let qty,rate,total;
+	function acceptQty()
+	{
+	qty=parseInt(document.getElementById("qty").value);
+	}
+	function acceptRate()
+	{
+	rate=parseInt(document.getElementById("rate").value);
+	total=qty*rate;
+	document.getElementById("total").value=""+total;
+	}
+	</script>	
+	</head>
+<body>
+	<input type='text' name='f' id='qty' value='' placeholder='enter quantity' onkeyup="acceptQty()"/>
+	<br><br>
+	<input type='text' name='s' id='rate' value='' placeholder='enter Rate'onkeyup="acceptRate()"/>
+	<br><br>
+	<input type='text' name='r' id='total' value ='' placeholder='show Total'/>
+</body>
+</html>
+	

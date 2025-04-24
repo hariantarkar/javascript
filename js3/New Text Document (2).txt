@@ -1,0 +1,38 @@
+<DOCTYPE HTML>
+<html>
+	<head>
+	<title>EMI Calculater:</title>
+	<style>
+	.A{
+	display:flex;
+	gap:20px;
+	background-color:black;
+	padding:20px;
+	}
+		
+	
+	</style>
+	<script>
+	function CalculetEmi()
+	{
+	let principle;
+	principle=(document.getElementById('loanamount').value);
+	let 
+<body>
+	<h2>EMI Calculater :--</h2>
+	<div class="A">
+		<div class="input">
+		<labale>
+		Loan Amount:<br>
+		<input type="number" id="loanamount" value="20000" >
+		</labale>
+		
+		<labale>
+		Ternure (years)<br>
+		<input type="number" id="intrestRate" value="3">
+		</labale>
+		
+		<button onclick="CalculetEmi()">Calculate Emi</button>
+	</div>
+		
+	

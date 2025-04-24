@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EMI Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .inputs, .output {
+      flex: 1;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 8px;
+      width: 220px;
+      margin-top: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .output h3 {
+      margin-top: 0;
+    }
+
+    .output p {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <h2> EMI calculator using JavaScript</h2>
+  <div class="container">
+    <div class="inputs">
+      <label>
+        Loan Amount (₹):<br>
+        <input type="number" id="loanAmount" value="2500000" min="100000" step="50000">
+      </label>
+
+      <label>
+        Tenure (Years):<br>
+        <input type="number" id="tenure" value="30" min="1" max="30">
+      </label>
+
+      <label>
+        Interest Rate (% P.A.):<br>
+        <input type="number" id="interestRate" value="8.7" min="0.1" step="0.1">
+      </label>
+
+      <button onclick="calculateEMI()">Calculate EMI</button>
+    </div>
+
+    <div class="output">
+      <h3>Monthly Home Loan EMI</h3>
+      <p id="emi">₹ 0</p>
+      <p id="totalInterest">Total interest: ₹ 0</p>
+      <p id="totalPayment">Total amount: ₹ 0</p>
+    </div>
+  </div>
+
+  <script>
+    function calculateEMI() {
+      const principal = parseFloat(document.getElementById('loanAmount').value);
+      const tenureYears = parseFloat(document.getElementById('tenure').value);
+      const annualInterestRate = parseFloat(document.getElementById('interestRate').value);
+
+      const tenureMonths = tenureYears * 12;
+      const monthlyInterestRate = annualInterestRate / 12 / 100;
+
+      const emi = (principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, tenureMonths)) / 
+                  (Math.pow(1 + monthlyInterestRate, tenureMonths) - 1);
+
+      const totalPayment = emi * tenureMonths;
+      const totalInterest = totalPayment - principal;
+
+      document.getElementById('emi').innerText = `₹ ${emi.toFixed(0)}`;
+      document.getElementById('totalInterest').innerText = `Total interest: ₹ ${totalInterest.toFixed(0)}`;
+      document.getElementById('totalPayment').innerText = `Total amount: ₹ ${totalPayment.toFixed(0)}`;
+    }
+  </script>
+</body>
+</html>
