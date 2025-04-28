@@ -1,0 +1,12 @@
+let a="good coding practice";
+	let index=a.search("coding");
+	
+	if(index!=-1)
+	{
+		console.log("value found  "+index);
+	}
+	else
+	{
+		console.log("value not found");
+	}
+	

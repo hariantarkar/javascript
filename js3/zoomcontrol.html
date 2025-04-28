@@ -1,0 +1,73 @@
+<html>
+	<head>
+	<title>Zoom control on using mouseover event</title>
+	<script type='text/javascript'>
+	function zoomCtrl(currEle)
+	{
+		if(currEle.id=='f')
+		{
+			currEle.style.width="400px";
+			currEle.style.height="100px";
+		}
+		else if(currEle.id=='s')
+		{
+			currEle.style.width='400px';
+			currEle.style.height="100px";
+		}
+		else if(currEle.id=='r')
+		{   currEle.style.width="600px";
+		    currEle.style.height="100px"; 
+		}
+	}
+		function originalCtrl(currEle)
+		{
+			if(currEle.id=='f')
+			{
+				currEle.style.width="400px";
+				currEle.style.height="40px";
+			}
+			else if(currEle.id=='s')
+			{
+				currEle.style.width="400px";
+				currEle.style.height="40px";
+			}
+			else if(currEle.id=='r')
+			{
+				currEle.style.width="400px";
+				currEle.style.height="40px";
+			}
+		}
+		</script>
+		<style>
+		input 
+		{
+			width:400px;
+			height:40px;
+		}
+		</style>
+		</head>
+<body id="parent">
+	<center>
+	<br><br>
+	<input type="text" name='txtCtrl' id='f' value="" 
+    onmouseover='zoomCtrl(this)' onmouseleave='originalCtrl(this)'/><br><br>
+	
+	<input type='text' name='txtCtrl' id='s' value="" 
+	onmouseover='zoomCtrl(this)' onmouseleave='originalCtrl(this)' />
+	<br><br>
+	
+	<input type='text' name='txtCtrl' value="" id='r' 
+	onmouseover='zoomCtrl(this)' onmouseleave='originalCtrl(this)' />
+	<br><br>
+	</center>
+</body>
+</html>
+	
+	
+	
+			
+				
+			
+		
+
+		
