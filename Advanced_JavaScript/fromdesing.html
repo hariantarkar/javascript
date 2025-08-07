@@ -1,0 +1,106 @@
+<html>
+	<head> 
+		<title>From desing</title>
+		<script type="text/javascript" src="email.js"></script>
+		<script type="text/javascript" src="namevalid.js"></script>
+		<script type="text/javascript" src="passwordValid.js"></script>
+		<script type="text/javascript" src="confumPassValid.js"></script>
+		<script type="text/javascript" src="phoneValid.js"></script>
+	<style>
+	body{
+	background-color:gray;
+	}
+	h1{
+	text-align:center;
+	text-decoration: underline;
+	}
+	#b{
+	text-align:center;}
+	.firstBox{
+	padding: 8px;
+	position:relative;
+	position:absolute;
+	left:100px;
+	right:100px;
+	padding:bottom 20px
+	bolder:1px solid black;
+	background-color:pink;
+	}
+	
+	
+	label {     
+		margin-left: 50px; 
+		text-align: left;   
+	}
+	input{
+	margin-left: 50px; 
+	}
+	.btn{
+	width:150px;
+	height:40px;
+	background-color:skyblue;
+	text-align:center;
+	margin: 0 auto;
+	cursor:pointer;
+	display: block;
+	font-size:18px;
+	}
+	</style>
+		
+	</head>
+<body>
+<form>
+	<div class="firstBox">
+	<h1> Registration Form</h1>
+	<label>First Name:<br><br>
+	<input type="text" name="name" value="" placeholder="Enter First Name" style='width:500px;height:40px;'
+	onkeyup='validateName(this.value)'/>
+	&nbsp;&nbsp;<span id="s"></span><br><br>
+	</label>
+	<label>Middle Name:<br><br>
+	<input type="text" name="name" value="" placeholder="Enter Middle Name" Style='width:500px;height:40px;'
+	onkeyup="validateName(this.value)"/><br><br>
+	</label>
+	
+	<label>Sir Name:<br><br>
+	<input type="text" name="name" value="" placeholder="Enter Last Name" Style='width:500px;height:40px;'
+	onkeyup="validateName(this.value)"/><br><br>
+	</label>
+	<label>Gender:
+	<input type="radio" name="Gender" value="Male"/>Male
+	</label>
+	<label>
+	<input type="radio" name="Gender"value="Female"/>Female
+	</label><br><br>
+	<label>Email:<br><br>
+	<input type='text' name='email' id='e'value=''placeholder="Enter Email"style='width:500px;height:40px'onkeyup="validateEmail(this.value)"/>
+	<span id='s'></span><br><br>
+	</label>
+	<label>Mobile No:<br><br>
+	<input type="text" value="+91"disabled Style='width:40px;height:40px;'>
+	<input type="text" name="name" value="" placeholder="Enter phone no" Style='width:400px;height:40px;'
+	onkeyup="PhoneValid(this.value)"/>
+	<span id='p'></span><br><br>
+	</label>
+	
+	<label>Address:<br><br>
+	<input type="text" name="name" value="" placeholder="Enter Address " Style='width:500px;height:50px;'
+	onkeyup="validateName(this.value)"/><br><br>
+	</label>
+
+	<label>password:<br><br>
+	<input type="password" password="password" id='pass' value='' placeholder="Enter password" style='width:500px; height:40px;' 
+	onkeyup="Passwordvalidate(this.value)"/>
+	<span id="passwordMessage"></span><br><br>
+	</label>
+	
+	<label>Confirm password:<br><br>
+	<input type="password" password="password" id="confirmPass" value='' placeholder="Confum password" style='width:500px; height:40px;'
+	onkeyup="ConfumPassword()"/>
+	<span id="confirmMessage"></span>
+	</label><br><br>
+	<button class="btn">Submit</button>
+	</div>
+</form>
+</body>	
+<html>
